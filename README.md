@@ -1,6 +1,6 @@
 # Simone Mouse Mover
 
-![Simone Mouse Mover](public/simone.png)
+![Simone Mouse Mover](public/simone.gif)
 
 ## Description
 
