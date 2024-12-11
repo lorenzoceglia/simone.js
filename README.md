@@ -24,20 +24,21 @@ Simone Mouse Mover is a simple script that automatically moves your mouse after 
 
 1. Clone this repository to your local machine:
 
-    ```bash
-    git clone https://github.com/lorenzoceglia/simone-mouse-mover.git
-    cd simone-mouse-mover
-    ```
+   ```bash
+   git clone https://github.com/lorenzoceglia/simone-mouse-mover.git
+   cd simone-mouse-mover
+   ```
 
 2. Install dependencies using pnpm:
 
-    ```bash
-    pnpm install
-    ```
+   ```bash
+   pnpm install
+   ```
 
 ## Running the Script
 
 To start the script, simply run the following command:
 
 ```bash
-electron simone.js
+pnpm start
+```
