@@ -24,6 +24,7 @@ function createOverlay() {
   });
 
   overlayWindow.loadFile(path.join(__dirname, "overlay.html"));
+  overlayWindow.setResizable(false);
 }
 
 function moveMouseRandomly() {
