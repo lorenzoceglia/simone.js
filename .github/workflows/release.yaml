@@ -43,11 +43,17 @@ jobs:
     - name: Run build Windows
       if: ${{ matrix.os == 'windows-latest' }}
       run: pnpm run build-windows
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Run build MacOs
       if: ${{ matrix.os == 'macos-latest' }}
       run: pnpm run build-mac
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Run build Linux
       if: ${{ matrix.os == 'ubuntu-latest' }}
       run: pnpm run build-linux
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
