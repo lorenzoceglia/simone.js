@@ -1,12 +1,20 @@
-const { app, BrowserWindow } = require("electron");
-const path = require("path");
-const robot = require("@jitsi/robotjs");
+import path from "node:path";
+import robot from "@jitsi/robotjs";
+import { BrowserWindow, app } from "electron";
 
+/**
+ * Contains the browser window
+ * @see https://www.electronjs.org/docs/latest/api/browser-window
+ * @type {BrowserWindow}
+ */
 let overlayWindow;
 let lastMousePosition = robot.getMousePos();
+/**
+ * @type {ReturnType<typeof setTimeout>}
+ */
 let timer;
 
-const interval = 60000; // 60 secondi
+const interval = 1000 * 60; // 60 secondi
 
 function createOverlay() {
   overlayWindow = new BrowserWindow({
@@ -23,7 +31,7 @@ function createOverlay() {
     },
   });
 
-  overlayWindow.loadFile(path.join(__dirname, "overlay.html"));
+  overlayWindow.loadFile(path.join(process.cwd(), "overlay.html"));
   overlayWindow.setResizable(false);
 }
 
@@ -39,7 +47,10 @@ function moveMouseRandomly() {
 function checkMouseActivity() {
   const currentMousePosition = robot.getMousePos();
 
-  if (currentMousePosition.x !== lastMousePosition.x || currentMousePosition.y !== lastMousePosition.y) {
+  if (
+    currentMousePosition.x !== lastMousePosition.x ||
+    currentMousePosition.y !== lastMousePosition.y
+  ) {
     console.log("Mouse movement detected! Timer reset.");
     lastMousePosition = currentMousePosition;
 
@@ -50,7 +61,11 @@ function checkMouseActivity() {
 
 app.on("ready", () => {
   console.log("Simone.js Mouse Mover v.1.1");
-  console.log(`Script started! Timer set to ${interval / 1000} seconds. Press CTRL+C to stop.`);
+  console.log(
+    `Script started! Timer set to ${
+      interval / 1000
+    } seconds. Press CTRL+C to stop.`
+  );
   createOverlay();
 
   setInterval(checkMouseActivity, 1000);
