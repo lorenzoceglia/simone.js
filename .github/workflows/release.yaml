@@ -40,5 +40,14 @@ jobs:
     - name: Install dependencies
       run: pnpm install
 
-    - name: Run build
+    - name: Run build Windows
+      if: ${{ matrix.os == 'windows-latest' }}
+      run: pnpm run build-all
+
+    - name: Run build MacOs
+      if: ${{ matrix.os == 'macos-latest' }}
+      run: pnpm run build-all
+
+    - name: Run build Linux
+      if: ${{ matrix.os == 'ubuntu-latest' }}
       run: pnpm run build-all

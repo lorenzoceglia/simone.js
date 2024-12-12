@@ -11,7 +11,9 @@
 		"prepare": "lefthook install",
 		"check": "biome check",
 		"start": "electron simone.mjs",
-		"build-all": "electron-builder -mwl"
+		"build-windows": "electron-builder -w",
+		"build-linux": "electron-builder -l",
+		"build-mac": "electron-builder -m"
 	},
 	"dependencies": {
 		"@jitsi/robotjs": "^0.6.13"
