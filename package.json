@@ -1,33 +1,35 @@
 {
-  "name": "simone-mouse-mover",
-  "productName": "Simone",
-  "version": "1.1.0",
-  "main": "simone.js",
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "scripts": {
-    "check": "biome check",
-    "start": "electron simone.mjs",
-    "build-all": "electron-builder -mwl"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@jitsi/robotjs": "^0.6.13"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@types/node": "^22.10.2",
-    "electron": "^33.2.1",
-    "electron-builder": "^25.1.8",
-    "lefthook": "^1.9.1",
-    "typescript": "^5.7.2"
-  },
-  "build": {
-    "appId": "simone-mouse-mover",
-    "files": "!public${/*}"
-  }
+	"name": "simone-mouse-mover",
+	"productName": "Simone",
+	"version": "1.1.0",
+	"main": "simone.mjs",
+	"keywords": ["Mouse Mover", "Chill Guy", "Simone"],
+	"author": "Lorenzo Ceglia",
+	"license": "Dual MIT/Apache-2.0",
+	"description": "Chill mouse mover",
+	"scripts": {
+		"prepare": "lefthook install",
+		"check": "biome check",
+		"start": "electron simone.mjs",
+		"build-all": "electron-builder -mwl"
+	},
+	"dependencies": {
+		"@jitsi/robotjs": "^0.6.13"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^22.10.2",
+		"dmg-license": "^1.0.11",
+		"electron": "^33.2.1",
+		"electron-builder": "^25.1.8",
+		"lefthook": "^1.9.1",
+		"typescript": "^5.7.2"
+	},
+	"build": {
+		"appId": "simone-mouse-mover",
+		"files": "!public${/*}"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	}
 }

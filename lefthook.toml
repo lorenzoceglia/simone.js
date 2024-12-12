@@ -2,7 +2,4 @@
 parallel = true
 
 [pre-commit.commands.check]
-run = "pnpm check"
-
-[pre-commit.commands.lint]
-run = "pnpm lint"
+run = "pnpm check --fix && git update-index --add --again"

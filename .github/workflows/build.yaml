@@ -1,13 +1,13 @@
-name: Build and Check
+name: Release
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - name: Checkout repository
@@ -28,5 +28,5 @@ jobs:
     - name: Install dependencies
       run: pnpm install
 
-    - name: Run check
-      run: pnpm run check
+    - name: Run build
+      run: pnpm run build-all

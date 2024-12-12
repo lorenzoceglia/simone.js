@@ -1,2 +1,11 @@
+# IDE
 .idea/
+
+# Node
 node_modules/
+
+# Build
+dist
+
+# Misc
+.DS_Store
