@@ -32,7 +32,7 @@ jobs:
       run: pnpm install
 
     - name: Run check
-      run: npm run check
+      run: pnpm run check
 
     - name: Run build
-      run: npm run build-all
+      run: pnpm run build-all

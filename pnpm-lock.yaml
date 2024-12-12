@@ -11,6 +11,10 @@ importers:
       '@jitsi/robotjs':
         specifier: ^0.6.13
         version: 0.6.13
+    optionalDependencies:
+      dmg-license:
+        specifier: ^1.0.11
+        version: 1.0.11
     devDependencies:
       '@biomejs/biome':
         specifier: ^1.9.4
