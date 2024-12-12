@@ -1,28 +1,28 @@
 @font-face {
-  font-family: "BN-FontBoy";
-  src: url("public/BN-FontBoy.ttf");
+	font-family: "BN-FontBoy";
+	src: url("public/BN-FontBoy.ttf");
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  overflow: hidden;
-  app-region: drag;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	overflow: hidden;
+	app-region: drag;
 }
 div {
-  position: relative;
+	position: relative;
 }
 img {
-  width: 230px;
-  height: 250px;
+	width: 230px;
+	height: 250px;
 }
 h1 {
-  font-size: 4rem;
-  font-family: BN-FontBoy;
-  color: white;
-  position: absolute;
-  bottom: -3rem;
-  left: 50%;
-  translate: -50% 0;
+	font-size: 4rem;
+	font-family: BN-FontBoy, serif;
+	color: white;
+	position: absolute;
+	bottom: -3rem;
+	left: 50%;
+	translate: -50% 0;
 }

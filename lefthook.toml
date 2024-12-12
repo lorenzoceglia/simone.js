@@ -1,0 +1,8 @@
+[pre-commit]
+parallel = true
+
+[pre-commit.commands.check]
+run = "pnpm check"
+
+[pre-commit.commands.lint]
+run = "pnpm lint"
