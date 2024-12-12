@@ -1,7 +1,7 @@
 {
 	"name": "simone-mouse-mover",
 	"productName": "Simone",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"main": "simone.mjs",
 	"keywords": ["Mouse Mover", "Chill Guy", "Simone"],
 	"author": "Lorenzo Ceglia",

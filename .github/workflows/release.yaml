@@ -2,8 +2,6 @@ name: Release
 
 on:
   push:
-    branches:
-      - main
     tags: ['v*']
 
 jobs:
@@ -25,6 +23,11 @@ jobs:
 
     - name: Install buildtools
       run: pip install setuptools
+
+    - name: Install Snapcraft
+      uses: samuelmeuli/action-snapcraft@v3
+      if: ${{ matrix.os == 'ubuntu-latest' }}
+
 
     - uses: pnpm/action-setup@v4
       name: Install pnpm
