@@ -1,6 +1,8 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 const robot = require("@jitsi/robotjs");
+const packageJson = require("./package.json");
+const { version } = packageJson;
 
 let overlayWindow;
 let lastMousePosition = robot.getMousePos();
@@ -25,6 +27,7 @@ function createOverlay() {
 
   overlayWindow.loadFile(path.join(__dirname, "overlay.html"));
   overlayWindow.setResizable(false);
+  overlayWindow.setContentProtection(true);
 }
 
 function moveMouseRandomly() {
@@ -49,7 +52,7 @@ function checkMouseActivity() {
 }
 
 app.on("ready", () => {
-  console.log("Simone.js Mouse Mover v.1.1");
+  console.log(`Simone.js Mouse Mover v.${version}`);
   console.log(`Script started! Timer set to ${interval / 1000} seconds. Press CTRL+C to stop.`);
   createOverlay();
 
